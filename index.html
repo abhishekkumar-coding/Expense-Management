@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Management Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <span class="sidebar-logo"><img src="./assets/logo.png" width="40px" alt="">
+                <h1 class="">Hajiri</h1>
+            </span>
+            <div class="sidebar-menu">
+                <span class="flex dashboard"><i class="fa-solid fa-house"></i>
+                    <p class="menu-item">Dashboard</p>
+                </span>
+
+                <div class="menu-section">
+                    <p class="menu-title">PEOPLE</p>
+                    <ul class="menu-list">
+                        <li class="menu-list-item employee"><span class="flex"><i class="fa-regular fa-user"></i>
+                                <p>Employee</p>
+                            </span></li>
+                        <li class="menu-list-item"><span class="flex"><i class="fa-solid fa-users"></i>
+                                <p>Team</p>
+                            </span></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section">
+                    <p class="menu-title">MANAGEMENT</p>
+                    <ul class="menu-list">
+                        <li class="menu-list-item"><span class="flex"><i class="fa-solid fa-calendar-check"></i>
+                                <p>Attendance</p>
+                            </span></li>
+                        <li class="menu-list-item"><span class="flex"><i class="fa-solid fa-plane"></i>
+                                <p>Leaves</p>
+                            </span></li>
+                        <li class="menu-list-item"><span class="flex"><i class="fa-solid fa-money-bill"></i>
+                                <p>Expense</p>
+                            </span></li>
+                        <li class="menu-list-item"><span class="flex"><i class="fa-solid fa-box"></i>
+                                <p>Assets</p>
+                            </span></li>
+                        <li class="menu-list-item"><span class="flex"><i class="fa-solid fa-chart-line"></i>
+                                <p>Reports</p>
+                            </span></li>
+                        <li class="menu-list-item"><span class="flex"><i class="fa-solid fa-coins"></i>
+                                <p>Super Coins</p>
+                            </span></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section">
+                    <p class="menu-title">PAYROLL</p>
+                    <ul class="menu-list">
+                        <li class="menu-list-item"><span class="flex"><i class="fa-solid fa-chart-pie"></i>
+                                <p>Dashboard</p>
+                            </span></li>
+                        <li class="menu-list-item"><span class="flex"><i class="fa-solid fa-file-invoice-dollar"></i>
+                                <p>EPF, ESI, & TDS</p>
+                            </span></li>
+                        <li class="menu-list-item"><span class="flex"><i class="fa-solid fa-receipt"></i>
+                                <p>Generate Salary Slip</p>
+                            </span></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section">
+                    <p class="menu-title">COMPANY</p>
+                    <ul class="menu-list">
+                        <li class="menu-list-item"><span class="flex"><i class="fa-solid fa-building"></i>
+                                <p>Company Setting</p>
+                            </span></li>
+                        <li class="menu-list-item"><span class="flex"><i class="fa-solid fa-clock"></i>
+                                <p>Attendance Setting</p>
+                            </span></li>
+                        <li class="menu-list-item"><span class="flex"><i class="fa-solid fa-calendar"></i>
+                                <p>Leave Setting</p>
+                            </span></li>
+                        <li class="menu-list-item"><span class="flex"><i class="fa-solid fa-money-check-alt"></i>
+                                <p>Salary Setting</p>
+                            </span></li>
+                    </ul>
+                </div>
+
+                <div class="subscription-section">
+                    <div class="subscription-details flex">
+                        <div class="subscription-info">
+                            <h1 class="subscription-title">Premium</h1>
+                            <p class="subscription-validity">Valid up to 12 months</p>
+                        </div>
+                        <h1 class="subscription-modify">Modify</h1>
+                    </div>
+
+                    <div class="user-profile flex">
+                        <div class="user-avatar">A</div>
+                        <div class="user-info">
+                            <h1 class="user-name">Hajiri</h1>
+                            <p class="user-email">hajiri0852@gmail.com</p>
+                        </div>
+                        <div class="arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="header flex">
+                <div class="header-content">
+                    <div class="header-title">
+                        <h1 class="header-heading">Expense Management</h1>
+                        <p class="header-subtext">Manage Employee Expense Reimbursements</p>
+                    </div>
+                    <div class="header-menu">
+                        <ul class="flex">
+                            <li class="menu-item header-1">Dashboard</li>
+                            <li class="menu-item">Expense Request</li>
+                            <li class="menu-item">Company Expense Policy</li>
+                            <li class="menu-item">Company Wallet</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-right flex">
+                    <span class="flex inbox-title"><img src="./assets/inbox.png" alt="">
+                        <h1 class="">My Inbox</h1>
+                    </span>
+                    <div class="user-logo">A</div>
+                </div>
+            </header>
+
+            <div class="dashboard flex">
+                <div class="date-range-container">
+                    <div class="date-range flex">
+                        <p class="date-range-title">Date Range</p>
+                        <div class="date-selector flex">
+                            <img class="prev-icon" src="/assets/arrow_left_alt.png" alt="Previous">
+                            <hr class="divider">
+                            <p class="current-month">January, 2025 <img class="dropdown-icon"
+                                    src="./assets//calendar_month.png" alt="Dropdown"></p>
+                            <hr class="divider">
+                            <img class="next-icon" src="./assets/arrow_left_alt.png" alt="Next">
+                        </div>
+                    </div>
+
+                    <div class="container-2 flex">
+                        <h1 class="wallet-details-title">Wallet Details</h1>
+                        <div class="wallet-details">
+                            <div class="company-wallet flex">
+                                <h1 class="company-wallet-title">Company Wallet</h1>
+                                <div class="wallet-balance">
+                                    <p class="balance-label">Your Balance</p>
+                                    <h1 class="balance-amount">&#8377;16,05,894</h1>
+                                </div>
+                                <div class="spending-limit flex">
+                                    <p class="limit-label">Spending Limit</p>
+                                    <p class="limit-amount">&#8377;10,05,894</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="employee-transactions flex">
+                            <h1 class="transactions-title">Employee Wallet Transactions</h1>
+
+                            <div class="transaction-list">
+                                <div class="transaction-item">
+                                    <div class="flex employee-container">
+                                        <img class="employee-image" src="./assets/img1.png" alt="Employee">
+                                        <div class="employee-info">
+                                            <p class="employee-name">Eleanor Pena</p>
+                                            <span class="employee-department flex">
+                                                <p class="department-label">Department:</p>
+                                                <h1 class="department-name">Sales Department</h1>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="transaction-amount">
+                                        <h1 class="amount">&#8377;10,988</h1>
+                                        <p class="transaction-date">Jan,23</p>
+                                    </div>
+                                </div>
+
+                                <div class="transaction-item">
+                                    <div class="flex employee-container">
+                                        <img class="employee-image" src="./assets//img2.png" alt="Employee">
+                                        <div class="employee-info">
+                                            <p class="employee-name">Alex Johnson</p>
+                                            <span class="employee-department flex">
+                                                <p class="department-label">Department:</p>
+                                                <h1 class="department-name">Marketing</h1>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="transaction-amount">
+                                        <h1 class="amount">&#8377;9,500</h1>
+                                        <p class="transaction-date">Jan,22</p>
+                                    </div>
+                                </div>
+                                <div class="transaction-item">
+                                    <div class="flex employee-container">
+                                        <img class="employee-image" src="./assets/img1.png" alt="Employee">
+                                        <div class="employee-info">
+                                            <p class="employee-name">Eleanor Pena</p>
+                                            <span class="employee-department flex">
+                                                <p class="department-label">Department:</p>
+                                                <h1 class="department-name">Sales Department</h1>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="transaction-amount">
+                                        <h1 class="amount">&#8377;10,988</h1>
+                                        <p class="transaction-date">Jan,23</p>
+                                    </div>
+                                </div>
+                                <div class="transaction-item">
+                                    <div class="flex employee-container">
+                                        <img class="employee-image" src="./assets//img3.png" alt="Employee">
+                                        <div class="employee-info">
+                                            <p class="employee-name">Sophia Wilson</p>
+                                            <span class="employee-department flex">
+                                                <p class="department-label">Department:</p>
+                                                <h1 class="department-name">HR Department</h1>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="transaction-amount">
+                                        <h1 class="amount">&#8377;8,750</h1>
+                                        <p class="transaction-date">Jan,20</p>
+                                    </div>
+                                </div>
+                                <div class="transaction-item">
+                                    <div class="flex employee-container">
+                                        <img class="employee-image" src="./assets/img1.png" alt="Employee">
+                                        <div class="employee-info">
+                                            <p class="employee-name">Eleanor Pena</p>
+                                            <span class="employee-department flex">
+                                                <p class="department-label">Department:</p>
+                                                <h1 class="department-name">Sales Department</h1>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="transaction-amount">
+                                        <h1 class="amount">&#8377;10,988</h1>
+                                        <p class="transaction-date">Jan,23</p>
+                                    </div>
+                                </div>
+                                <div class="transaction-item">
+                                    <div class="flex employee-container">
+                                        <img class="employee-image" src="./assets//img4.png" alt="Employee">
+                                        <div class="employee-info">
+                                            <p class="employee-name">Sophia Wilson</p>
+                                            <span class="employee-department flex">
+                                                <p class="department-label">Department:</p>
+                                                <h1 class="department-name">HR Department</h1>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="transaction-amount">
+                                        <h1 class="amount">&#8377;8,750</h1>
+                                        <p class="transaction-date">Jan,20</p>
+                                    </div>
+                                </div>
+                                <div class="transaction-item">
+                                    <div class="flex employee-container">
+                                        <img class="employee-image" src="./assets//img5.png" alt="Employee">
+                                        <div class="employee-info">
+                                            <p class="employee-name">Sophia Wilson</p>
+                                            <span class="employee-department flex">
+                                                <p class="department-label">Department:</p>
+                                                <h1 class="department-name">HR Department</h1>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="transaction-amount">
+                                        <h1 class="amount">&#8377;8,750</h1>
+                                        <p class="transaction-date">Jan,20</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="see-all-btn">See all Transactions</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-3 flex">
+                    <div class="upper_div flex a">
+                        <div class="expense-card">
+                            <span class="expense-header flex">
+                                <img class="expense-icon" src="./assets/inventory_2.png" alt="">
+                                <p class="expense-title">Settled Expense</p>
+                            </span>
+                            <h1 class="expense-amount">&#8377;1,24,420</h1>
+                            <div class="expense-change flex">
+                                <img class="change-icon" src="./assets/Path.png" alt="">
+                                <p class="change-percentage">1.3%</p>
+                                <p class="change-description">Up from past week</p>
+                            </div>
+                        </div>
+                        <div class="expense-card">
+                            <span class="expense-header flex">
+                                <img class="expense-icon" src="./assets/inventory_2.png" alt="">
+                                <p class="expense-title">Settled Expense</p>
+                            </span>
+                            <h1 class="expense-amount">&#8377;1,24,420</h1>
+                            <div class="expense-change flex">
+                                <img class="change-icon" src="./assets/Path.png" alt="">
+                                <p class="change-percentage">1.3%</p>
+                                <p class="change-description">Up from past week</p>
+                            </div>
+                        </div>
+                        <div class="expense-card">
+                            <span class="expense-header flex">
+                                <img class="expense-icon" src="./assets/inventory_2.png" alt="">
+                                <p class="expense-title">Settled Expense</p>
+                            </span>
+                            <h1 class="expense-amount">&#8377;1,24,420</h1>
+                            <div class="expense-change flex">
+                                <img class="change-icon" src="./assets/Path.png" alt="">
+                                <p class="change-percentage">1.3%</p>
+                                <p class="change-description">Up from past week</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="categories-section b">
+                        <div class="categories-header flex">
+                            <h1 class="categories-title">Categories</h1>
+                            <span class="week-selector flex">
+                                <p class="week-text">Week 1</p>
+                                <img class="dropdown-icon" src="./assets/arrow_drop_down.png" alt="">
+                            </span>
+                        </div>
+                        <div class="categories-summary flex">
+                            <div class="summary-details">
+                                <span class="summary-header flex">
+                                    <h1 class="summary-count">10</h1>
+                                    <p class="summary-label">Types of Expense</p>
+                                </span>
+                                <p class="summary-description">Defined By Your Organisation</p>
+                            </div>
+                            <div class="summary-chart flex">
+                                <img class="chart-icon" src="./assets/Ellipse.png" width="100px" alt="">
+                                <h1 class="chart-percentage">%</h1>
+                            </div>
+                        </div>
+                        <ul class="categories-list">
+                            <li class="category-item flex">
+                                <div class="category-info flex">
+                                    <div class="dot-1"></div>
+                                    <span class="category-text flex">
+                                        <p class="category-name">Travel & Transportation</p>
+                                        <p class="category-percentage">(%)</p>
+                                    </span>
+                                </div>
+                                <h1 class="category-amount">&#8377;80,900</h1>
+                            </li>
+                            <li class="category-item flex">
+                                <div class="category-info flex">
+                                    <div class="dot"></div>
+                                    <span class="category-text flex">
+                                        <p class="category-name">Travel & Transportation</p>
+                                        <p class="category-percentage">(%)</p>
+                                    </span>
+                                </div>
+                                <h1 class="category-amount">&#8377;80,900</h1>
+                            </li>
+                            <li class="category-item flex">
+                                <div class="category-info flex">
+                                    <div class="dot-2"></div>
+                                    <span class="category-text flex">
+                                        <p class="category-name">Travel & Transportation</p>
+                                        <p class="category-percentage">(%)</p>
+                                    </span>
+                                </div>
+                                <h1 class="category-amount">&#8377;80,900</h1>
+                            </li>
+                            <li class="category-item flex">
+                                <div class="category-info flex">
+                                    <div class="dot-3"></div>
+                                    <span class="category-text flex">
+                                        <p class="category-name">Travel & Transportation</p>
+                                        <p class="category-percentage">(%)</p>
+                                    </span>
+                                </div>
+                                <h1 class="category-amount">&#8377;80,900</h1>
+                            </li>
+                            <li class="category-item flex">
+                                <div class="category-info flex">
+                                    <div class="dot-4"></div>
+                                    <span class="category-text flex">
+                                        <p class="category-name">Travel & Transportation</p>
+                                        <p class="category-percentage">(%)</p>
+                                    </span>
+                                </div>
+                                <h1 class="category-amount">&#8377;80,900</h1>
+                            </li>
+                            <li class="category-item flex">
+                                <div class="category-info flex">
+                                    <div class="dot-5"></div>
+                                    <span class="category-text flex">
+                                        <p class="category-name">Travel & Transportation</p>
+                                        <p class="category-percentage">(%)</p>
+                                    </span>
+                                </div>
+                                <h1 class="category-amount">&#8377;80,900</h1>
+                            </li>
+                            <li class="category-item flex">
+                                <div class="category-info flex">
+                                    <div class="dot-6"></div>
+                                    <span class="category-text flex">
+                                        <p class="category-name">Travel & Transportation</p>
+                                        <p class="category-percentage">(%)</p>
+                                    </span>
+                                </div>
+                                <h1 class="category-amount">&#8377;80,900</h1>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="client-report c">
+                        <div class="report-header flex">
+                            <h1 class="report-title">Client Report</h1>
+                            <p class="week-selector">Week 1 <img class="dropdown-icon" src="" alt=""></p>
+                        </div>
+
+                        <div class="report-content">
+                            <div class="client-summary flex">
+                                <div class="client-info flex">
+                                    <img class="client-icon" src="./assets/img-2.png" alt="">
+                                    <span class="client-details">
+                                        <p class="client-name">Wekrata</p>
+                                        <progress class="client-progress" id="file" value="12" max="100">22%</progress>
+                                    </span>
+                                </div>
+                                <div class="client-amount">
+                                    <h1 class="amount">&#8377;54,230</h1>
+                                    <p class="amount-description">This week</p>
+                                </div>
+                            </div>
+                            <hr class="line">
+                            <div class="total-time-spent flex">
+                                <span class="time-spent-info flex">
+                                    <p class="time-spent-text">Total time spent till now</p>
+                                    <h1 class="total-amount">&#8377;54,230</h1>
+                                </span>
+                                <span class="view-details">View The Details <img class="details-icon" src=""
+                                        alt=""></span>
+                            </div>
+                        </div>
+
+                        <div class="report-content">
+                            <div class="client-summary flex">
+                                <div class="client-info flex">
+                                    <img class="client-icon" src="./assets/img-3.png" alt="">
+                                    <span class="client-details">
+                                        <p class="client-name">Wekrata</p>
+                                        <progress class="client-progress" id="file" value="12" max="100">22%</progress>
+                                    </span>
+                                </div>
+                                <div class="client-amount">
+                                    <h1 class="amount">&#8377;54,230</h1>
+                                    <p class="amount-description">This week</p>
+                                </div>
+                            </div>
+                            <hr class="line">
+                            <div class="total-time-spent flex">
+                                <span class="time-spent-info flex">
+                                    <p class="time-spent-text">Total time spent till now</p>
+                                    <h1 class="total-amount">&#8377;54,230</h1>
+                                </span>
+                                <span class="view-details">View The Details <img class="details-icon" src=""
+                                        alt=""></span>
+                            </div>
+                        </div>
+                        <div class="report-content">
+                            <div class="client-summary flex">
+                                <div class="client-info flex">
+                                    <img class="client-icon" src="./assets/img-3.png" alt="">
+                                    <span class="client-details">
+                                        <p class="client-name">Wekrata</p>
+                                        <progress class="client-progress" id="file" value="12" max="100">22%</progress>
+                                    </span>
+                                </div>
+                                <div class="client-amount">
+                                    <h1 class="amount">&#8377;54,230</h1>
+                                    <p class="amount-description">This week</p>
+                                </div>
+                            </div>
+                            <hr class="line">
+                            <div class="total-time-spent flex">
+                                <span class="time-spent-info flex">
+                                    <p class="time-spent-text">Total time spent till now</p>
+                                    <h1 class="total-amount">&#8377;54,230</h1>
+                                </span>
+                                <span class="view-details">View The Details <img class="details-icon" src=""
+                                        alt=""></span>
+                            </div>
+                        </div>
+                        <div class="report-content">
+                            <div class="client-summary flex">
+                                <div class="client-info flex">
+                                    <img class="client-icon" src="./assets/img-4.png" alt="">
+                                    <span class="client-details">
+                                        <p class="client-name">Wekrata</p>
+                                        <progress class="client-progress" id="file" value="12" max="100">22%</progress>
+                                    </span>
+                                </div>
+                                <div class="client-amount">
+                                    <h1 class="amount">&#8377;54,230</h1>
+                                    <p class="amount-description">This week</p>
+                                </div>
+                            </div>
+                            <hr class="line">
+                            <div class="total-time-spent flex">
+                                <span class="time-spent-info flex">
+                                    <p class="time-spent-text">Total time spent till now</p>
+                                    <h1 class="total-amount">&#8377;54,230</h1>
+                                </span>
+                                <span class="view-details">View The Details <img class="details-icon" src=""
+                                        alt=""></span>
+                            </div>
+                        </div>
+                        <div class="report-content">
+                            <div class="client-summary flex">
+                                <div class="client-info flex">
+                                    <img class="client-icon" src="./assets/img-5.png" alt="">
+                                    <span class="client-details">
+                                        <p class="client-name">Wekrata</p>
+                                        <progress class="client-progress" id="file" value="12" max="100">22%</progress>
+                                    </span>
+                                </div>
+                                <div class="client-amount">
+                                    <h1 class="amount">&#8377;54,230</h1>
+                                    <p class="amount-description">This week</p>
+                                </div>
+                            </div>
+                            <hr class="line">
+                            <div class="total-time-spent flex">
+                                <span class="time-spent-info flex">
+                                    <p class="time-spent-text">Total time spent till now</p>
+                                    <h1 class="total-amount">&#8377;54,230</h1>
+                                </span>
+                                <span class="view-details">View The Details <img class="details-icon" src=""
+                                        alt=""></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="department-budget flex d">
+                        <h1 class="budget-title">Department Budget Allocation</h1>
+                        <hr class="line-2">
+                        <div class="budget-list flex">
+                            <div class="budget-item">
+                                <h1 class="budget-amount">&#8377;40,240</h1>
+                                <p class="budget-category">Sales and Marketing</p>
+                            </div>
+                            <div class="budget-item">
+                                <h1 class="budget-amount">&#8377;40,240</h1>
+                                <p class="budget-category">Sales and Marketing</p>
+                            </div>
+                            <div class="budget-item">
+                                <h1 class="budget-amount">&#8377;40,240</h1>
+                                <p class="budget-category">Sales and Marketing</p>
+                            </div>
+                            <div class="budget-item ">
+                                <h1 class="budget-amount">&#8377;40,240</h1>
+                                <p class="budget-category">Sales and Marketing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
